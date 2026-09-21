@@ -1,5 +1,7 @@
+[tool.pyrefly]
 project-includes = [
     "**/*.py*",
     "**/*.ipynb",
 ]
+
 site-package-path = ".venv/lib/site-packages" 

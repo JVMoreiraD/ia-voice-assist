@@ -1,3 +1,72 @@
-.venv
-__pycache__
-.vscode
+# --------------------------------------------
+# Python & Uv Specific
+# --------------------------------------------
+
+# Ambiente virtual criado pelo UV (padrão: .venv)
+.venv/
+env/
+env.bak/
+# Arquivo de bloqueio de dependências do UV (geralmente NÃO deve ser commitado se o projeto depende de versões lockadas, 
+# mas para projetos open-source onde todos usam a mesma versão, pode-se decidir. 
+# NOBREVEMENTE, se você usa "uv sync --locked", este arquivo DEVE ser commitado. 
+# Se você usa pip/setuptools sem lock, ignore.
+# Como regra geral moderno com UV: IGNORE.
+# uv.lock
+
+# Cache do UV
+.uv/
+
+# Cache do Ruff
+.ruff_cache
+
+
+# Arquivos gerados durante a compilação de extensões nativas (pyd)
+*.so
+*.pyd
+*.pyi
+
+# --------------------------------------------
+# Python Standard
+# --------------------------------------------
+# Ignorar __pycache__ e arquivos temporários compilados
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+*.dist-info/
+
+# Folders de build (especialmente para pip/setuptools)
+build/
+dist/
+*.egg
+
+# --------------------------------------------
+# IDE & Editor (VS Code, PyCharm, etc.)
+# --------------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# --------------------------------------------
+# Dados sensíveis e Logs
+# --------------------------------------------
+# Evite enviar senhas ou chaves de API
+.env
+.env.local
+credentials.json
+*.pem
+*.key
+secrets.json
+
+# Logs de execução (para não expor dados sensíveis em logs de depuração)
+logs/
+*.log
+
+# --------------------------------------------
+# Sistema Operacional & IDEs Específicos
+# --------------------------------------------
+.DS_Store          # macOS
+Thumbs.db          # Windows
+desktop.ini         # Windows
