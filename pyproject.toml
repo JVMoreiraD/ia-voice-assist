@@ -1,0 +1,32 @@
+[project]
+name = "ia-voice-assist"
+version = "0.1.0"
+description = "Python voice assistant using IA API."
+readme = "README.md"
+authors = [
+    { name = "JVMoreiraD", email = "jvitormoreirad@hotmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "pyaudio>=0.2.14",
+    "pyrefly>=1.3.1",
+    "python-dotenv>=1.2.3",
+    "pyttsx3>=2.99",
+    "requests>=2.34.2",
+    "ruff>=0.16.8",
+    "speechrecognition>=3.17.0",
+    "text-to-speech>=1.6.1",
+]
+
+[tool.pyrefly]
+project-includes = [
+    "**/*.py*",
+    "**/*.ipynb",
+]
+site-package-path = ".venv/lib/site-packages" 
+[project.scripts]
+ia-voice-assist = "ia_voice_assist:main"
+
+[build-system]
+requires = ["uv_build>=0.12.9,<0.13.0"]
+build-backend = "uv_build"
